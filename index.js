@@ -36,10 +36,10 @@ app.post("/api/shorturl/", async (req,res) => {
 
   let i = urlArray.findIndex((element) => element===url);
   if(i != -1){
-    res.json({"original_url ": url,"short_url" : i})
+    res.json({"original_url": url,"short_url" : i})
   } else {
     urlArray.push(url);
-    res.json({"original_url ": url,"short_url" : urlArray.length - 1})
+    res.json({"original_url": url,"short_url" : urlArray.length - 1})
   }
 })
 
